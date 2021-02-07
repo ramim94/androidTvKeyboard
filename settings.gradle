@@ -1,0 +1,3 @@
+include ':tvKeyboard'
+include ':app'
+rootProject.name = "AndroidTvKeyboard"

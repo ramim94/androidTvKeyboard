@@ -1,0 +1,5 @@
+<resources>
+    <string-array name="kb_elements">
+        <item>a</item>
+    </string-array>
+</resources>
