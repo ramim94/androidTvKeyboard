@@ -7,6 +7,8 @@ import android.widget.EditText
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ramim94.tvkeyboard.callback.OnItemFocusChanged
+import com.ramim94.tvkeyboard.callback.OnSearchButtonPressedListener
 
 /*
 *
@@ -27,6 +29,7 @@ class TvKeyboardView : RelativeLayout ,KbInterface{
     private var kbInput: EditText
     private var queryText = ""
     private lateinit var onSearchButtonPressedListener : OnSearchButtonPressedListener
+    private lateinit var onItemFocusChanged: OnItemFocusChanged
 
     init {
 
@@ -64,5 +67,13 @@ class TvKeyboardView : RelativeLayout ,KbInterface{
             }
         }
         kbInput.setText(queryText)
+    }
+
+    override fun onSelectedItemChanged(index: Int) {
+        onItemFocusChanged.onItemFocusChanged(index)
+    }
+
+    public fun addOnItemFocusChangedListener(onItemFocusChanged: OnItemFocusChanged){
+        this.onItemFocusChanged = onItemFocusChanged
     }
 }

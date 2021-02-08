@@ -14,15 +14,6 @@ class KbAdapter(val kbInterface: KbInterface) : RecyclerView.Adapter<KeyboardEac
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KeyboardEachKey {
         val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.single_kb_key, parent, false)
-        view.setOnFocusChangeListener { v, hasFocus ->
-            if(hasFocus){
-                v.animate().scaleX(1.5f)
-                v.animate().scaleY(1.5f)
-            }else{
-                v.animate().scaleX(1.0f)
-                v.animate().scaleY(1.0f)
-            }
-        }
         return KeyboardEachKey(kbInterface, view)
     }
 
@@ -72,6 +63,18 @@ class KeyboardEachKey(kbInterface: KbInterface, itemView: View) : RecyclerView.V
     init {
         itemView.setOnClickListener {
             kbInterface.onButtonClicked(adapterPosition)
+        }
+
+        itemView.setOnFocusChangeListener { v, hasFocus ->
+            if(hasFocus){
+                v.animate().scaleX(1.5f)
+                v.animate().scaleY(1.5f)
+            }else{
+                v.animate().scaleX(1.0f)
+                v.animate().scaleY(1.0f)
+            }
+            kbInterface.onSelectedItemChanged(adapterPosition)
+
         }
     }
 }
