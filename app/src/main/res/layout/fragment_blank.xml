@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ExampleFragment">
 
     <com.ramim94.tvkeyboard.TvKeyboardView
-        android:padding="5dp"
+        android:padding="10dp"
         android:id="@+id/keyboard"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

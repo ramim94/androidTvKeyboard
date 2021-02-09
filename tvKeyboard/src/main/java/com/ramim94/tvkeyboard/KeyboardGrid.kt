@@ -19,27 +19,27 @@ class KbAdapter(val kbInterface: KbInterface) : RecyclerView.Adapter<KeyboardEac
 
     override fun onBindViewHolder(holder: KeyboardEachKey, position: Int) {
         when(kbText[position]){
-            "src" ->{
+            "src" -> {
                 Glide.with(holder.itemView.context)
-                    .load(R.drawable.ic_search)
-                    .into(holder.kbImageKey)
+                        .load(R.drawable.ic_search)
+                        .into(holder.kbImageKey)
 
-                holder.kbImageKey.visibility=View.VISIBLE
-                holder.kbKey.visibility=View.INVISIBLE
+                holder.kbImageKey.visibility = View.VISIBLE
+                holder.kbKey.visibility = View.INVISIBLE
             }
-            "del"->{
+            "del" -> {
                 Glide.with(holder.itemView.context)
-                    .load(R.drawable.ic_backspace)
-                    .into(holder.kbImageKey)
-                holder.kbImageKey.visibility=View.VISIBLE
-                holder.kbKey.visibility=View.INVISIBLE
+                        .load(R.drawable.ic_backspace)
+                        .into(holder.kbImageKey)
+                holder.kbImageKey.visibility = View.VISIBLE
+                holder.kbKey.visibility = View.INVISIBLE
             }
-            "clr"->{
+            "clr" -> {
                 Glide.with(holder.itemView.context)
-                    .load(R.drawable.ic_delete)
-                    .into(holder.kbImageKey)
-                holder.kbImageKey.visibility=View.VISIBLE
-                holder.kbKey.visibility=View.INVISIBLE
+                        .load(R.drawable.ic_delete)
+                        .into(holder.kbImageKey)
+                holder.kbImageKey.visibility = View.VISIBLE
+                holder.kbKey.visibility = View.INVISIBLE
             }
             else->{
                 holder.kbKey.text = kbText[position]
@@ -67,14 +67,15 @@ class KeyboardEachKey(kbInterface: KbInterface, itemView: View) : RecyclerView.V
 
         itemView.setOnFocusChangeListener { v, hasFocus ->
             if(hasFocus){
-                v.animate().scaleX(1.5f)
-                v.animate().scaleY(1.5f)
+                v.scaleX = 0.9f
+                v.scaleY = 0.9f
+                v.elevation = 0.2f
             }else{
-                v.animate().scaleX(1.0f)
-                v.animate().scaleY(1.0f)
+                v.scaleX = 1.0f
+                v.scaleY = 1.0f
+                v.elevation=0f
             }
             kbInterface.onSelectedItemChanged(adapterPosition)
-
         }
     }
 }
