@@ -22,6 +22,8 @@ class ExampleFragment : Fragment(), OnSearchButtonPressedListener, OnItemFocusCh
         kbView = view.findViewById(R.id.keyboard)
         kbView.addOnSearchButtonPressedListener(this)
         kbView.addOnItemFocusChangedListener(this)
+
+        kbView.getSearchInputView().hint = "Search Video"
         return view
     }
 

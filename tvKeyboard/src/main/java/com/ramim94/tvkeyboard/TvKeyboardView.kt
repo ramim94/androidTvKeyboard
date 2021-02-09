@@ -47,6 +47,14 @@ class TvKeyboardView : RelativeLayout ,KbInterface{
         this.onSearchButtonPressedListener = onSearchButtonPressedListener
     }
 
+    public fun getSearchInputView(): EditText {
+        return kbInput
+    }
+
+    public fun getSearchKeyboardView() : RecyclerView {
+        return kbView
+    }
+
     override fun onButtonClicked(index: Int) {
         when(kbText[index]){
             "src" ->{
