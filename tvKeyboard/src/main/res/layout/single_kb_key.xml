@@ -6,25 +6,22 @@
     android:focusableInTouchMode="true"
     android:focusable="true"
     android:id="@+id/kb_button_frame"
-    android:background="@drawable/border"
-
-    >
+    android:background="@drawable/border">
 
     <TextView
         android:id="@+id/kb_key"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:text=""
+        android:layout_width="35dp"
+        android:layout_height="32dp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="26sp"
         />
 
     <ImageView
         android:id="@+id/kb_img_key"
         android:visibility="invisible"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
         android:padding="8dp"
         />
 
