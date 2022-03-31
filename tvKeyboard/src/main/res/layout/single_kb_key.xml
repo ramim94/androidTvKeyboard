@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="42dp"
+    android:layout_height="42dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
     android:focusableInTouchMode="true"
     android:focusable="true"
     android:id="@+id/kb_button_frame"
@@ -10,8 +12,8 @@
 
     <TextView
         android:id="@+id/kb_key"
-        android:layout_width="35dp"
-        android:layout_height="32dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
         android:textColor="@android:color/black"
         android:textAlignment="center"
         android:textSize="26sp"
@@ -20,9 +22,11 @@
     <ImageView
         android:id="@+id/kb_img_key"
         android:visibility="invisible"
-        android:layout_width="35dp"
-        android:layout_height="38dp"
-        android:padding="8dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:scaleType="fitCenter"
+        android:paddingStart="7dp"
+        android:paddingTop="6dp"
         />
 
 </FrameLayout>

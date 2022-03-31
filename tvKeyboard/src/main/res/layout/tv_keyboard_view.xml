@@ -2,7 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <!--    252 width because cell width is 42-->
     <EditText
         android:background="@drawable/border"
         android:focusable="false"
@@ -19,7 +19,7 @@
         android:inputType="text"
         android:textColor="#000000"
         android:textColorHint="#5C5C5C"
-        android:layout_width="200dp"
+        android:layout_width="252dp"
         android:layout_marginStart="10dp"
         android:privateImeOptions="horizontalAlignment=left"
         android:layout_height="wrap_content"/>
@@ -27,7 +27,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/kb_view"
         android:layout_marginTop="20dp"
-        android:layout_width="210dp"
+        android:layout_width="272dp"
         android:paddingEnd="10dp"
         android:paddingStart="10dp"
         android:layout_height="match_parent"

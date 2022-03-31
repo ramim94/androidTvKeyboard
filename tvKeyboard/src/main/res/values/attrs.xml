@@ -4,4 +4,9 @@
 <!--    <declare-styleable name="TvKeyboardView">-->
 <!--        <attr name="hintText" format="string" />-->
 <!--    </declare-styleable>-->
+    <declare-styleable name="TvKeyboardView">
+        <attr name="cell_width" format="dimension">42dp</attr>
+        <attr name="cell_height" format="dimension">42dp</attr>
+        <attr name="cell_text_size" format="dimension">26sp</attr>
+    </declare-styleable>
 </resources>

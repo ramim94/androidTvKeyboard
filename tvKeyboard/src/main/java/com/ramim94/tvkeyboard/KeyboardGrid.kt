@@ -1,12 +1,15 @@
 package com.ramim94.tvkeyboard
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 class KbAdapter(val kbInterface: KbInterface) : RecyclerView.Adapter<KeyboardEachKey>() {
     private val kbText = KbConstants.kbText
@@ -20,9 +23,18 @@ class KbAdapter(val kbInterface: KbInterface) : RecyclerView.Adapter<KeyboardEac
     override fun onBindViewHolder(holder: KeyboardEachKey, position: Int) {
         when(kbText[position]){
             "src" -> {
-                Glide.with(holder.itemView.context)
-                        .load(R.drawable.ic_search)
-                        .into(holder.kbImageKey)
+//                Glide.with(holder.itemView.context)
+//                        .load(R.drawable.ic_search)
+//                        .apply(RequestOptions().fitCenter())
+//                        .into(holder.kbImageKey)
+
+                holder.kbImageKey
+                    .setImageDrawable(
+                    ResourcesCompat.getDrawable(
+                        holder.itemView.resources,
+                        R.drawable.ic_search,
+                        holder.itemView.context.theme))
+
 
                 holder.kbImageKey.visibility = View.VISIBLE
                 holder.kbKey.visibility = View.INVISIBLE
@@ -30,6 +42,7 @@ class KbAdapter(val kbInterface: KbInterface) : RecyclerView.Adapter<KeyboardEac
             "del" -> {
                 Glide.with(holder.itemView.context)
                         .load(R.drawable.ic_backspace)
+                        .apply(RequestOptions().fitCenter())
                         .into(holder.kbImageKey)
                 holder.kbImageKey.visibility = View.VISIBLE
                 holder.kbKey.visibility = View.INVISIBLE
@@ -37,6 +50,7 @@ class KbAdapter(val kbInterface: KbInterface) : RecyclerView.Adapter<KeyboardEac
             "clr" -> {
                 Glide.with(holder.itemView.context)
                         .load(R.drawable.ic_delete)
+                        .apply(RequestOptions().fitCenter())
                         .into(holder.kbImageKey)
                 holder.kbImageKey.visibility = View.VISIBLE
                 holder.kbKey.visibility = View.INVISIBLE
