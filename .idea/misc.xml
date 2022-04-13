@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/2020Projects/AndroidTvKeyboard/app/src/main/res/layout/activity_main.xml" value="0.3067708333333333" />
         <entry key="..\:/2020Projects/AndroidTvKeyboard/app/src/main/res/layout/fragment_blank.xml" value="0.11302083333333333" />
+        <entry key="..\:/2020Projects/AndroidTvKeyboard/tvKeyboard/src/main/res/drawable/border.xml" value="0.1845" />
+        <entry key="..\:/2020Projects/AndroidTvKeyboard/tvKeyboard/src/main/res/drawable/border_selected.xml" value="0.1845" />
+        <entry key="..\:/2020Projects/AndroidTvKeyboard/tvKeyboard/src/main/res/drawable/kb_key_selector.xml" value="0.1845" />
         <entry key="..\:/2020Projects/AndroidTvKeyboard/tvKeyboard/src/main/res/layout/single_kb_key.xml" value="0.2671875" />
         <entry key="..\:/2020Projects/AndroidTvKeyboard/tvKeyboard/src/main/res/layout/tv_keyboard_view.xml" value="0.2671875" />
       </map>
